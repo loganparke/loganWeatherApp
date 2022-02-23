@@ -33,7 +33,6 @@ var inputSubmitHandler = function(btncity){
     }
     storeCities.push(city);
     localStorage.setItem("cities", JSON.stringify(storeCities));
-    //console.log(localStorage);
     }
 var cityBtnHandler = function(city){
     getLoctionCoordinate(city);
@@ -48,9 +47,6 @@ var getLoctionCoordinate = function(location){
     fetch(locationApi).then(function(response){
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data.features);
-                console.log(data.features[0].bbox);
-                console.log(data.features[0].bbox[1]);
                 var latitude = data.features[0].bbox[1];
                 var longitude = data.features[0].bbox[0];
                 var city = location;
