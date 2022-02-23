@@ -42,7 +42,7 @@ var cityBtnHandler = function(city){
 }
 
 var getLoctionCoordinate = function(location){
-    var apiUrl = "http://api.positionstack.com/v1/forward?access_key=2e6350e3cc0e5b5db6bc0afb15e5bebd&query=" + location + "&limit=1";
+    var apiUrl = "https://api.positionstack.com/v1/forward?access_key=2e6350e3cc0e5b5db6bc0afb15e5bebd&query=" + location + "&limit=1";
     //api key 2e6350e3cc0e5b5db6bc0afb15e5bebd
     fetch(apiUrl).then(function(response){
         if (response.ok) {
