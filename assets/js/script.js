@@ -42,13 +42,17 @@ var cityBtnHandler = function(city){
 }
 
 var getLoctionCoordinate = function(location){
-    var apiUrl = "https://api.positionstack.com/v1/forward?access_key=2e6350e3cc0e5b5db6bc0afb15e5bebd&query=" + location + "&limit=1";
-    //api key 2e6350e3cc0e5b5db6bc0afb15e5bebd
-    fetch(apiUrl).then(function(response){
+
+    var locationApi = "https://api.geoapify.com/v1/geocode/search?city=" + location + "&apiKey=47815c8b9a824b5ba381c59bd1c9cfbb";
+
+    fetch(locationApi).then(function(response){
         if (response.ok) {
             response.json().then(function(data){
-                var latitude = data.data[0].latitude;
-                var longitude = data.data[0].longitude;
+                console.log(data.features);
+                console.log(data.features[0].bbox);
+                console.log(data.features[0].bbox[1]);
+                var latitude = data.features[0].bbox[1];
+                var longitude = data.features[0].bbox[0];
                 var city = location;
                 getWeather(latitude, longitude, city);
 
