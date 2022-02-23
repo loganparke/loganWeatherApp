@@ -53,6 +53,9 @@ var getLoctionCoordinate = function(location){
                 getWeather(latitude, longitude, city);
 
             });
+        } else {
+            alert("there was an error")
+            console.log(error);
         }
     });
 
@@ -184,7 +187,7 @@ var displayWeather = function(data, city){
 var displayStorage = function() {
     //display 10 most recent city searches
     var getCities = JSON.parse(localStorage.getItem("cities"));
-    console.log(getCities);
+
     
     for (var i = 0; i < getCities.length; i++) {
         if (getCities[i] === "" || getCities[i] === " "){
