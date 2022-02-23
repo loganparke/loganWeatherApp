@@ -54,8 +54,7 @@ var getLoctionCoordinate = function(location){
 
             });
         } else {
-            alert("there was an error")
-            console.log(error);
+            console.log("error");
         }
     });
 
