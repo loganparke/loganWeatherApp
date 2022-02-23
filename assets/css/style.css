@@ -1,0 +1,117 @@
+body{
+    height: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    color: white;
+}
+.header {
+    background-color: rgb(233, 233, 223, 0.6);
+    width: 100%;
+    display: flex;
+    color: black;
+}
+.header p {
+    text-align: center;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid black;
+}
+.today-weather {
+    width: 70%;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.city-btns {
+    width: 29%;
+    border: 3px solid black;
+}
+.container {
+    width: 85%;
+    height: 85%;
+    background-color: rgba(77, 74, 74, 0.6);
+    border-radius: 20px;
+}
+.forcast-container {
+    display: flex;
+
+}
+#info {
+    width: 50%;
+}
+#info li {
+    margin-top: 2em;
+}
+#icon-holder {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+#icon-holder img {
+    width: 350px!important;
+    height: 350px!important;
+}
+#place-day {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* forcast classes */
+.forcast-card {
+    background-color: rgb(32, 48, 143);
+    border: 3px solid black;
+    margin: 4px;
+    width: 18%;
+    height: 100%;
+}
+
+/*local storage buttons */
+.city-click {
+    border-radius: 5px;
+}
+
+ /* add and remove classes */
+.hidden {
+    display: none;
+}
+.uvi{
+    border-radius: 5px;
+    padding: 1px 10px;
+}
+.uvi-good {
+    background-color: green;
+}
+.uvi-ok {
+    background-color: yellow;
+}
+.uvi-bad {
+    background-color: red;
+}
+
+.sun {
+    background-image: url("../images/sun.jpg");
+}
+.rain {
+    background-image: url("../images/rain.jpg");
+}
+.snow {
+    background-image: url("../images/snow.jpg");
+}
+.cloud {
+    background-image: url("../images/cloud.jpg");
+}
+.night {
+    background-image: url("../images/night.jpg");
+}
+.night-snow {
+    background-image: url("../images/nightsnow.webp");
+}
+
